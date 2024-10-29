@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #161616;
+}
+
+li {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", serif;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 5px 0;
+}
+
+ul {
+    max-width: 483px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+ul h3 {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", serif;
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.separador {
+    margin: 15px 0;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./img/tim-bernhard-Ndo5_cY6Nr0-unsplash.jpg);
+}
+
+.content-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 800px;
+}
+
+.letter-lionel {
+    color: rgba(255, 255, 255);
+    opacity: 0;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    letter-spacing: 25px;
+    margin: 0px !important;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    text-align: left;
+    line-height: 100px;
+    animation: letterIn 400ms 1s ease-in forwards;
+}
+
+@keyframes letterIn {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img-lionel-letter {
+    width: 25%;
+    height: auto;
+    max-width: 100%;
+    vertical-align: top;
+    padding-right: 20px;
+    animation: imgIn 500ms 1.5s ease-in forwards;
+    opacity: 0;
+}
+
+@keyframes imgIn {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main {
+    min-height: 100vh;
+}
+
+#title {
+    font-size: 4rem;
+    margin: 3rem;
+    text-align: center;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 500;
+    font-style: italic;
+    background: linear-gradient(to bottom, #75AADB 44.44%, #FFFFFF 44.44%, #FFFFFF 66.67%, #75AADB 66.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#text-description {
+    color: rgb(255, 255, 255);
+    margin: 20px 0;
+    font-family: "Libre Caslon Text", serif;
+    font-size: 24px;
+    text-align: end;
+}
+
+.bg-content {
+    background-color: #2b2b2b;
+    width: 100%;
+}
+
+#img-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#img {
+    height: auto;
+    object-fit: cover;
+    transition: all .3s ease;
+}
+
+#headline {
+    color: rgb(255, 255, 255);
+    margin: 50px 0;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 25px;
+    font-family: "Montserrat", serif;
+    max-width: 550px;
+}
+
+#headline span {
+    background: linear-gradient(to bottom, #75AADB 45.33%, #FFFFFF 33.33%, #FFFFFF 66.67%, #75AADB 18.67%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hidden {
+        transition: all 1.5s;
+    }
+}
+
+.image-container {
+    position: relative;
+}
+
+.side-image {
+    position: absolute;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    height: fit-content;
+}
+
+.left {
+    left: 400px;
+    z-index: -1;
+    top: -20%;
+    transform: rotate(330deg);
+}
+
+.right {
+    right: 400px;
+    transform: rotate(30deg);
+    z-index: -1;
+    top: 0%;
+}
+
+.image-container:hover #img {
+    filter: drop-shadow(1px 2px 10px #fff);
+}
+
+.image-container:hover .side-image {
+    opacity: 1;
+}
+
+blockquote {
+    color: white;
+    font-style: italic;
+    max-width: 545px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.7;
+    width: 100%;
+}
+
+blockquote p {
+    font-family: "Montserrat", serif;
+    margin: 15px;
+}
+
+blockquote cite {
+    letter-spacing: 1px;
+}
+
+footer {
+    background-color: #2b2b2b;
+    width: 100%;
+}
+
+footer h3 {
+    text-align: center;
+    color: rgb(211, 211, 211);
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Montserrat", serif;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(68, 174, 201);
+    transition: all .5s ease;
+}
+
+footer a:hover {
+    color: rgb(96, 189, 212);
+}
